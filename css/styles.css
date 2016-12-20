@@ -1,0 +1,11 @@
+#weather-form{
+	text-align: center;
+}
+
+#current-temp{
+	text-align: center;
+}
+
+#weather-canvas{
+	margin: auto;
+}
