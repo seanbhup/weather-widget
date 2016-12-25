@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather Widget</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles2.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type="text/javascript" src="js/scripts2.js"></script>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<form id="weather-form text-center" class="text-center">
+					<label class="sr-only">Enter Zip Code for Weather Info</label>
+					<input type="text" id="zip-code" placeholder="Enter Zip Code">
+					<button type="submit" class="btn btn-primary get-weather-btn">What's the Weather?</button>
+				</form>
+			</div>
+		</div>
+		<div class="row widget-wrapper">
+			<div class="col-sm-8 col-sm-offset-2 widget">
+				<div class="row-1">
+					<div class="location-name">Location</div>
+					<div class="actual-temp-fahrenheit">0&deg;</div>
+				</div>
+				<div class="row-2">PICTURE</div>
+				<div class="row-3">
+					<div class="feels-like-fahrenheit">Feels Like: <span id="feels-like-value">0&deg;</span></div>
+					<div class="humidity">Humidity: <span id="humidity-value">0</span>%</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

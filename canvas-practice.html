@@ -64,7 +64,7 @@
 		this.r = red;
 		this.g = green;
 		this.b = blue;
-		this.rad = 50;
+		this.rad = 10;
 		this.canvasX = canvasX;
 		this.canvasY = canvasY;
 		this.endArc = Math.PI * 2;
@@ -94,20 +94,22 @@
   	Ball.prototype.start = function(){
   		this.draw();
   	};
-	var ball = new Ball(100,0,100,100,0,50,500,500,9,20);
-	var basketBall = new Ball(200,200,0,100,0,50,500,500,5,10);
-	var soccerBall = new Ball(200,200,0,100,0,50,500,500,5,5);
-	var footBall = new Ball(200,200,0,100,0,50,500,500,7,1);
+	var ball = new Ball(100,0,99,0,144,10,500,500,2,2);
+	var basketBall = new Ball(200,200,12,100,0,10,500,500,2,2);
+	var soccerBall = new Ball(300,500,0,10,242,10,500,500,2,2);
+	var footBall = new Ball(0,250,88,100,0,10,500,500,2,2);
 	var balls = [ball,basketBall,soccerBall,footBall];
 	function draw(){
-		context.clearRect(0,0,balls[0].canvasX,balls[0].canvasY);
+		// context.clearRect(0,0,balls[0].canvasX,balls[0].canvasY);
 		for(let i = 0; i < balls.length; i++){
-		balls[i].updateBall();
-		context.fillStyle = '#'+balls[i].r+balls[i].g+balls[i].b;
-		context.beginPath();
-		context.arc(balls[i].x,balls[i].y,balls[i].rad,0,balls[i].endArc);
-		console.log(balls[i].x,balls[i].y,balls[i].rad,balls[i].canvasX)
-		context.fill();
+			balls[i].updateBall();
+			context.fillStyle = '#'+balls[i].r+balls[i].g+balls[i].b;
+			console.log('#'+balls[i].r+balls[i].g+balls[i].b);
+			context.beginPath();
+			context.arc(balls[i].x,balls[i].y,balls[i].rad,0,balls[i].endArc);
+			// console.log(balls[i].x,balls[i].y,balls[i].rad,balls[i].canvasX)
+			context.fill();
+
 	
 		}
 		
