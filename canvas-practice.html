@@ -17,10 +17,10 @@
 	</canvas>
 
 	<script type="text/javascript">
-		
+
 		var canvas = document.getElementById("the-canvas");
 		var context = canvas.getContext("2d");
-	
+
 		// LINES
 		// context.strokeStyle = "#ff0000"
 		// context.lineWidth = 5;
@@ -56,7 +56,7 @@
 		// context.fillStyle = grd;
 		// context.fillRect(0,0,500,500);
 
-
+// /ball
 
 	function Ball(x,y,red,green,blue,rad, canvasX = 500, canvasY = 500, xSpeed = 1, ySpeed = 1){
 		this.x = x;
@@ -110,14 +110,14 @@
 			// console.log(balls[i].x,balls[i].y,balls[i].rad,balls[i].canvasX)
 			context.fill();
 
-	
+
 		}
-		
+
 		requestAnimationFrame(draw);
 	}
 	draw();
 
-				
+
 
 	</script>
 
